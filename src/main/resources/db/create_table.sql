@@ -1,3 +1,12 @@
+CREATE TABLE `materiales` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(255) NOT NULL,
+  `tipo` enum('Decoración','Resina','Color') NOT NULL,
+  `cantidad_disponible` int(11) NOT NULL,
+  `unidad_medida` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+
 CREATE TABLE `moldes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(255) NOT NULL,
@@ -7,15 +16,6 @@ CREATE TABLE `moldes` (
   KEY `material_id` (`material_id`),
   CONSTRAINT `moldes_ibfk_1` FOREIGN KEY (`material_id`) REFERENCES `materiales` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
-
-CREATE TABLE `materiales` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(255) NOT NULL,
-  `tipo` enum('Decoración','Resina','Color') NOT NULL,
-  `cantidad_disponible` int(11) NOT NULL,
-  `unidad_medida` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 CREATE TABLE `productos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,

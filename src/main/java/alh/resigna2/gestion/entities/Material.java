@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigInteger;
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -14,6 +16,6 @@ public class Material {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(nullable = false)
-    private Long id;
+    private Integer id;
 
 }

@@ -1,7 +1,6 @@
 package alh.resigna2.gestion.controller;
 
 import alh.resigna2.gestion.dto.PersonaResponseDTO;
-import alh.resigna2.gestion.entities.Persona;
 import alh.resigna2.gestion.service.PersonaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RestController
 public class PersonaController {
+
     private final PersonaService personaService;
 
     @GetMapping("/{dni}")
